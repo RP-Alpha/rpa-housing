@@ -1,21 +1,60 @@
 # rpa-housing
 
-A shell-based housing system.
+<div align="center">
 
-## Features
-- **Buy/Sell**: Purchase properties via Target interaction.
-- **Shells**: Spawns interior shells at isolated coordinates (`Z - 50`) for privacy.
-- **Entry/Exit**: Teleport logic with proper offset management.
+![GitHub Release](https://img.shields.io/github/v/release/RP-Alpha/rpa-housing?style=for-the-badge&logo=github&color=blue)
+![GitHub commits](https://img.shields.io/github/commits-since/RP-Alpha/rpa-housing/latest?style=for-the-badge&logo=git&color=green)
+![License](https://img.shields.io/github/license/RP-Alpha/rpa-housing?style=for-the-badge&color=orange)
+![Downloads](https://img.shields.io/github/downloads/RP-Alpha/rpa-housing/total?style=for-the-badge&logo=github&color=purple)
 
-## Installation
-1. Ensure `rpa-lib` is started.
-2. Add `ensure rpa-housing` to your `server.cfg`.
+**Shell-Based Property System**
 
-## Configuration
-Define houses in `config.lua`. Requires a shell prop resource.
+</div>
 
-## Credits
-- RP-Alpha Development Team
+---
 
-## License
-MIT
+## ✨ Features
+
+- 🏠 **Buy/Sell** - Purchase properties via Target
+- 🏗️ **Shell Spawning** - Instanced interiors
+- 🚪 **Entry/Exit** - Seamless teleportation
+- ⚙️ **Configurable** - Easy to add new properties
+
+---
+
+## 📥 Installation
+
+1. Download the [latest release](https://github.com/RP-Alpha/rpa-housing/releases/latest)
+2. Ensure you have a shell/interior resource installed
+3. Extract to your `resources` folder
+4. Add to `server.cfg`:
+   ```cfg
+   ensure rpa-housing
+   ```
+
+---
+
+## ⚙️ Configuration
+
+Add properties in `config.lua`:
+
+```lua
+Config.Houses = {
+    ['house1'] = {
+        label = "Starter House",
+        coords = vector3(x, y, z),
+        price = 50000,
+        shell = 'basic_apartment'
+    }
+}
+```
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/RP-Alpha">RP-Alpha</a></sub>
+</div>
