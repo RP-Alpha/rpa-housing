@@ -18,7 +18,16 @@
 - 🏠 **Buy/Sell** - Purchase properties via Target
 - 🏗️ **Shell Spawning** - Instanced interiors
 - 🚪 **Entry/Exit** - Seamless teleportation
+- 🔐 **Permission System** - Admin property management
 - ⚙️ **Configurable** - Easy to add new properties
+
+---
+
+## 📦 Dependencies
+
+- `rpa-lib` (Required)
+- `oxmysql` (Required)
+- Shell/interior resource (e.g., `basic-interiors`)
 
 ---
 
@@ -26,17 +35,26 @@
 
 1. Download the [latest release](https://github.com/RP-Alpha/rpa-housing/releases/latest)
 2. Ensure you have a shell/interior resource installed
-3. Extract to your `resources` folder
-4. Add to `server.cfg`:
+3. Import the database:
+   ```sql
+   source sql/install.sql
+   ```
+4. Extract to your `resources` folder
+5. Add to `server.cfg`:
    ```cfg
+   ensure rpa-lib
    ensure rpa-housing
    ```
 
 ---
 
-## ⚙️ Configuration
+## 🗄️ Database Setup
 
-Add properties in `config.lua`:
+The `rpa_housing` table stores property ownership and data.
+
+---
+
+## ⚙️ Configuration
 
 ```lua
 Config.Houses = {
